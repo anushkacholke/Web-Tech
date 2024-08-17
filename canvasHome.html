@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        #can {
+            border: 2px solid black;
+        }
+    </style>
+    <script src="scripts/draw-ellipse.js"></script>
+</head>
+<body>
+    <canvas  width="500px" height="500px" id="can1"></canvas>
+    <script>
+        let x=document.getElementById("can1");
+        let y=x.getContext("2d");
+        y.beginPath();
+        y.arc(200,200,150,0,Math.PI*2);
+        y.stroke();
+
+        //y.strokeStyle="black";
+        y.beginPath();
+        y.arc(130,150,30,0,Math.PI*2);
+        y.fill();
+
+        y.beginPath();
+        y.arc(270,150,30,0,Math.PI*2);
+        y.fill();
+
+        y.beginPath();
+        y.arc(200,250,50,0,Math.PI);
+        y.stroke();
+
+        y.beginPath();
+        y.arc(200,252,50,0,Math.PI);
+        y.stroke();
+        
+    </script>
+</body>
+</html>
